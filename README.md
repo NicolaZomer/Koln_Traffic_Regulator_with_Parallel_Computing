@@ -20,9 +20,6 @@ The dataset at our disposal was 20 GB space separated text file composed with th
 - Notebook 3: [Fold By](/3-Foldby_approach.ipynb)
 - Notebook 4: [Dashboard and Streaming](/4-Dashboard_and_streaming.ipynb)
 
-## Benchmark 
-In order to inspect how the performances change with respect to the cluster's architecture we perform some benchmarks on a pruned version of the dataset (~ 1 GB). We tried different values of the main parameters of our setup, such as the number of workers (`n_workers`) for each machine, the number of threads per worker (`nthreads`) and the block size (`blocksize`) used to read and import the data. We do this for both DAG optimizations. The resulting plots and tables can be found in the notebook [5-benchmark_results](/5-benchmark_results.ipynb), while the data are stored in the folder [benchmark_data](/benchmark_data/).
-
 ## Overview
 ### Notebook 1: Grid and Benchmark on n files
 In first place we create a grid of rectangles that spans the whole map at our disposal and we fill it placing the corresponding Base Station (BS) at the center of each rectangle. We report here the image of the resulting grid superimposed on the map of Koln.  
@@ -53,6 +50,10 @@ First we build an interactive dashboard using the Python libraries [Panel](https
 <center> <img src="images/preview.png" width=500/> </center>
 
 Then, we implement the possibility to generate a stream of data from the dataset with the number of car connected to each BS at each time. We use the library [streamz](https://streamz.readthedocs.io/en/latest/), which supports a Dask integration. The data is streamed sequentially, streaming the information related to a specific time instant one next to the other. The input data from the stream are stored in a [streaming dataframe](https://streamz.readthedocs.io/en/latest/dataframes.html) and a time window is set to update the plot. The plot of the number of connections to each BS and of table with the input data are realized using again the library [HoloViews](https://holoviews.org/).
+
+## Benchmark 
+In order to inspect how the performances change with respect to the cluster's architecture we perform some benchmarks on a pruned version of the dataset (~ 1 GB). We tried different values of the main parameters of our setup, such as the number of workers (`n_workers`) for each machine, the number of threads per worker (`nthreads`) and the block size (`blocksize`) used to read and import the data. We do this for both DAG optimizations. The resulting plots and tables can be found in the notebook [5-benchmark_results](/5-benchmark_results.ipynb), while the data are stored in the folder [benchmark_data](/benchmark_data/).
+
 
 
 
