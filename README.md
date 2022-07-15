@@ -21,7 +21,7 @@ The dataset at our disposal was 20 GB space separated text file composed with th
 - Notebook 4: [Dashboard and Streaming](/4-Dashboard_and_streaming.ipynb)
 
 ## Benchmark 
-In order to inspect how the performances change with respect to the cluster's architecture we perform some benchmarks on a pruned version of the dataset (~ 1 GB). We tried different values of the main parameters of our setup, such as the number of workers (`n_workers`) for each machine, the number of threads per worker (`nthreads`) and the block size (`blocksize`) used to read and import the data. We do this for both DAG optimizations. The resulting plots and tables can be found in the notebook [benchmark_results](/benchmark_results.ipynb), while the data are stored in the folder [benchmark_data](/benchmark_data/).
+In order to inspect how the performances change with respect to the cluster's architecture we perform some benchmarks on a pruned version of the dataset (~ 1 GB). We tried different values of the main parameters of our setup, such as the number of workers (`n_workers`) for each machine, the number of threads per worker (`nthreads`) and the block size (`blocksize`) used to read and import the data. We do this for both DAG optimizations. The resulting plots and tables can be found in the notebook [5-benchmark_results](/5-benchmark_results.ipynb), while the data are stored in the folder [benchmark_data](/benchmark_data/).
 
 ## Overview
 ### Notebook 1: Grid and Benchmark on n files
